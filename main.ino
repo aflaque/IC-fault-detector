@@ -20,10 +20,10 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 // Truth tables
 const byte TBL_7400_NAND[4] = {1,1,1,0};
-const byte TBL_7408_AND [4] = {0,0,0,1};
-const byte TBL_7432_OR  [4] = {0,1,1,1};
-const byte TBL_7486_XOR [4] = {0,1,1,0};
-const byte TBL_7402_NOR [4] = {1,0,0,0};
+const byte TBL_7408_AND[4] = {0,0,0,1};
+const byte TBL_7432_OR[4] = {0,1,1,1};
+const byte TBL_7486_XOR[4] = {0,1,1,0};
+const byte TBL_7402_NOR[4] = {1,0,0,0};
 
 enum IcType {
   IC_UNKNOWN = 0,
