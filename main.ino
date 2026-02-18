@@ -27,12 +27,12 @@ const byte TBL_7402_NOR[4] = {1,0,0,0};
 
 enum IcType {
   IC_UNKNOWN = 0,
-  IC_7400,
-  IC_7402,
-  IC_7404,
-  IC_7408,
-  IC_7432,
-  IC_7486
+  IC_7400,  //NAND gate
+  IC_7402,  //NOR gate
+  IC_7404,  //NOT gate
+  IC_7408,  //AND gate
+  IC_7432,  //OR gate
+  IC_7486   //XOR gate
 };
 
 IcType currentIC = IC_UNKNOWN;
@@ -63,7 +63,7 @@ bool detect7404() {
 }
 
 // ----------- Test 2-input IC with dynamic mapping -----------
-void test2InputIC(byte out[4], int A_PIN, int B_PIN, int Y_PIN) {
+void test2InputIC(byte out[4], int A_PIN, int B_PIN, int Y_PIN) { 
   const byte pattern[4][2] = {
     {0,0},{0,1},{1,0},{1,1}
   };
